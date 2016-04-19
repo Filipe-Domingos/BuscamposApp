@@ -23,7 +23,8 @@
         <activity android:name=".CadastroPontoTela" />
         <activity android:name=".CadastroOnibusTela" />
         <activity android:name=".CadastroLinhaTela" />
-        <activity android:name=".CadastroHorarioTela"></activity>
+        <activity android:name=".CadastroHorarioTela" />
+        <activity android:name=".CadastroEmpresaTela"></activity>
     </application>
 
 </manifest>
