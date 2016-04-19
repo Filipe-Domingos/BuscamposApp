@@ -68,7 +68,7 @@ public class LoginTela extends AppCompatActivity {
     }
 
     public void cadastrarUsuarioOnClick (View v){
-        //startActivity(new Intent(this, CadastroUsuarioTela.class));
+        startActivity(new Intent(this, CadastroUsuarioTela.class));
     }
 
     public void limparOnClick (View v){
