@@ -53,7 +53,7 @@ public class LoginTela extends AppCompatActivity {
             SharedPreferences preferencias = getPreferences(MODE_PRIVATE);
             SharedPreferences.Editor editor = preferencias.edit();
             editor.commit();
-            //startActivity(new Intent(this,PrincipalTela.class));
+            startActivity(new Intent(this,PrincipalTela.class));
 
             String mensagemConectado = getString(R.string.conectadoLogin);
             Toast toast = Toast.makeText(this, mensagemConectado, Toast.LENGTH_SHORT);

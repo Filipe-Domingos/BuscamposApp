@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.edu.iff.pooa20152.buscampos.PrincipalTela">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/tituloCadastrar"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:id="@+id/txTituloCadastrarGeral"
+            android:layout_weight="0.30"
+            android:textColor="#161979"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/cadastrar_onibus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:clickable="true"
+            android:drawableTop="@drawable/onibus"
+            android:text="@string/cadastrar_onibus"
+            android:textAlignment="center"
+            android:onClick="cadastrarOnibusOnClick"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cadastrar_linha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/cadastrar_onibus"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:drawableTop="@drawable/terminal"
+            android:text="@string/cadastrar_linha"
+            android:onClick="cadastrarLinhaOnClick"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cadastrar_horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/cadastrar_onibus"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="160dp"
+            android:clickable="true"
+            android:drawableTop="@drawable/horario_onibus"
+            android:text="@string/cadastrar_horario"
+            android:onClick="cadastrarHorarioOnClick"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cadastrar_empresa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/cadastrar_horario"
+            android:layout_alignRight="@id/cadastrar_linha"
+            android:clickable="true"
+            android:drawableTop="@drawable/empresa"
+            android:text="@string/cadastrar_empresa"
+            android:onClick="cadastrarEmpresaOnClick"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cadastrar_ponto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/cadastrar_onibus"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            android:drawableTop="@drawable/ponto"
+            android:text="@string/cadastrar_ponto"
+            android:onClick="cadastrarPontoOnClick"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/cadastrar_ponto"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:drawableTop="@drawable/sair"
+            android:text="@string/sair"
+            android:onClick="sairAppOnClick"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
