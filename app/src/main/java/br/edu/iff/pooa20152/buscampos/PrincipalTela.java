@@ -10,7 +10,7 @@ public class PrincipalTela extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.principal_tela);
     }
-/*
+
     public void cadastrarOnibusOnClick (View v){
         startActivity(new Intent(this, CadastroOnibusTela.class));
     }
@@ -33,5 +33,5 @@ public class PrincipalTela extends AppCompatActivity {
 
     public void sairAppOnClick (View v){
         finish();
-    }*/
+    }
 }
