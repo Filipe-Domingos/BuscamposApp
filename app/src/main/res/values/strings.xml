@@ -1,3 +1,73 @@
 <resources>
     <string name="app_name">BusCampos</string>
+    <string name="nome">Nome</string>
+    <string name="senha">Senha</string>
+    <string name="mostrarSenha">Mostrar Senha.</string>
+    <string name="entrar">Entrar</string>
+    <string name="limpar">Limpar</string>
+    <string name="cadastrarUsuario">Cadastre-se no BusCampos.</string>
+    <string name="cadastrar_onibus">Ônibus</string>
+    <string name="cadastrar_ponto">Pontos</string>
+    <string name="cadastrar_horario">Horários</string>
+    <string name="erroLogin">E-mail ou Senha inválida, favor verificar !!!!</string>
+    <string name="conectadoLogin">Bem vindo ao Aplicativo BusCampos !!!!</string>
+    <string name="tituloCadastroUsuario">Cadastrar Usuários</string>
+    <string name="codigoUsuario">Código do Usuário</string>
+    <string name="nomeUsuario">Nome do Usuário</string>
+    <string name="dataUsuario">Data de Nascimento</string>
+    <string name="email">E-mail</string>
+    <string name="senhaUsuario">Digite a Senha</string>
+    <string name="salvar">Salvar</string>
+    <string name="mostrar">Mostrar</string>
+    <string name="deletar">Deletar</string>
+    <string name="codigoOnibus">Código Ônibus:    </string>
+    <string name="tituloCadastrarOnibus">Cadastrar Ônibus</string>
+    <string name="codigoEmpresa">Código Empresa:    </string>
+    <string name="placa">Placa Ônibus:    </string>
+    <string name="qtsAssento">Quantidade Assentos:    </string>
+    <string name="assentoEspecial">Assento Especial:    </string>
+    <string name="comentario">Comentário:</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="nomeEmpresa">Nome Empresa:</string>
+    <string name="tituloCadastrarEmpresa">Cadastrar Empresas</string>
+    <string name="cnpj">CNPJ:</string>
+    <string name="cadastrar_empresa">Empresas</string>
+    <string name="tituloCadastrar">Cadastros</string>
+    <string name="tituloCadastrarHorario">Cadastrar Horários</string>
+    <string name="codigoHorario">Código Horário:</string>
+    <string name="codigoLinha">Código Linha:</string>
+    <string name="hora">Hora Linha:</string>
+    <string name="tituloCadastroLinha">Cadastrar Linhas</string>
+    <string name="nomeLinha">Nome Linha:</string>
+    <string name="codigoPonto">Código Ponto</string>
+    <string name="cadastrar_linha">Linhas</string>
+    <string name="telefone">Telefone:</string>
+    <string name="endereco">Endereço:</string>
+    <string name="sair">Sair</string>
+    <string name="avaliacao">Avaliação:</string>
+    <string name="tituloCadastroPonto">Cadastrar Pontos</string>
+    <string name="codPonto">Código Ponto:</string>
+    <string name="rua">Rua:</string>
+    <string name="bairro">Bairro:</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="sexo">Sexo:</string>
+
+
+    <string-array name="avaliacao_array">
+        <item>Bom</item>
+        <item>Ruim</item>
+        <item>Ótimo</item>
+        <item>Regular</item>
+        <item>Péssimo</item>
+    </string-array>
+    <string-array name="assento_array">
+        <item>Sim</item>
+        <item>Não</item>
+    </string-array>
+    <string-array name="sexo_array">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
 </resources>
