@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.edu.iff.pooa20152.buscampos.CadastroOnibusTela">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/tituloCadastrarOnibus"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:id="@+id/txTituloCadastrarOnibus"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.30"
+            android:textColor="#161979" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/codigoOnibus"
+                android:id="@+id/txCodigoOnibus" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edCodigoOnibus"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:layout_weight="0.80" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/codigoEmpresa"
+                android:id="@+id/txCodigoEmpresa" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edCodigoEmpresa"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/placa"
+                android:id="@+id/txPlaca" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/edPlaca"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/qtsAssento"
+                android:id="@+id/txQtsAssento" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/edNumAssento"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.12">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/assentoEspecial"
+                android:id="@+id/txEspecial" />
+
+            <Spinner
+                android:id = "@+id/assento_spinner"
+                android:layout_width = "90dp"
+                android:textAlignment="center"
+                android:layout_height = "match_parent"
+                android:spinnerMode="dialog" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_weight="0.20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/avaliacao"
+                android:id="@+id/txAvaliacao" />
+
+            <Spinner
+                android:id = "@+id/avaliacao_spinner"
+                android:layout_width = "90dp"
+                android:layout_height = "match_parent"
+                android:textAlignment="center"
+                android:layout_weight="0.1"
+                android:spinnerMode="dialog"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:text="@string/salvar"
+                android:id="@+id/btSalvar"
+                android:layout_weight="0.30"
+                android:background="#5b86f2" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:text="@string/mostrar"
+                android:id="@+id/btMostrar"
+                android:layout_weight="0.30"
+                android:background="#61dd80" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:text="@string/deletar"
+                android:id="@+id/btDeletar"
+                android:layout_weight="0.30"
+                android:background="#ef6666" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
