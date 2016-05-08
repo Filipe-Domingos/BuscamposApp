@@ -54,6 +54,7 @@
     <string name="longitude">Longitude:</string>
     <string name="sexo">Sexo:</string>
 
+    <string name="URL">http://buscamposweb.herokuapp.com/</string>
 
     <string-array name="avaliacao_array">
         <item>Bom</item>

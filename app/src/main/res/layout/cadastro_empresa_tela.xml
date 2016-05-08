@@ -89,7 +89,7 @@
                 android:ems="10"
                 android:id="@+id/edCnpj"
                 android:layout_weight="1"
-                android:inputType="textPersonName"
+                android:inputType="number|textPersonName"
                 android:textAlignment="center"/>
         </LinearLayout>
 
