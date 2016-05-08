@@ -46,7 +46,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/edCodigoHorario"
                 android:inputType="textPersonName"
-                android:layout_weight="0.80" />
+                android:layout_weight="0.80"
+                android:textAlignment="center"/>
         </LinearLayout>
 
         <LinearLayout
@@ -67,7 +68,8 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/edHora"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textAlignment="center"/>
         </LinearLayout>
 
         <LinearLayout
@@ -87,7 +89,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/edCodigoEmpresa"
                 android:inputType="textPersonName"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textAlignment="center"/>
         </LinearLayout>
 
         <LinearLayout
@@ -109,7 +112,8 @@
                 android:inputType="text"
                 android:ems="10"
                 android:id="@+id/edCnpj"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textAlignment="center"/>
         </LinearLayout>
 
         <LinearLayout
@@ -142,6 +146,14 @@
                 android:id="@+id/btDeletar"
                 android:layout_weight="0.30"
                 android:background="#ef6666" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:text="@string/limpar"
+                android:id="@+id/btLimpar"
+                android:layout_weight="0.30"
+                android:background="#ffea00" />
         </LinearLayout>
     </LinearLayout>
 
