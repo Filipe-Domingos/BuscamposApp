@@ -1,9 +1,11 @@
-package br.edu.iff.pooa20152.buscampos;
+package br.edu.iff.pooa20152.buscampos.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import br.edu.iff.pooa20152.buscampos.R;
 
 public class CadastroOnibusTela extends AppCompatActivity {
 

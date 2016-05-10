@@ -1,4 +1,4 @@
-package br.edu.iff.pooa20152.buscampos;
+package br.edu.iff.pooa20152.buscampos.activity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -16,6 +16,9 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import br.edu.iff.pooa20152.buscampos.R;
+import br.edu.iff.pooa20152.buscampos.domain.Empresa;
+import br.edu.iff.pooa20152.buscampos.domain.EmpresaService;
 import br.edu.iff.pooa20152.buscampos.helper.RestFullHelper;
 
 public class CadastroEmpresaTela extends AppCompatActivity {
@@ -87,7 +90,7 @@ public class CadastroEmpresaTela extends AppCompatActivity {
         });
     }
 
-    private void limpar(){
+    private void limpar() {
         edCodigoEmpresa.setText("");
         edNomeEmpresa.setText("");
         edCnpj.setText("");
@@ -96,94 +99,112 @@ public class CadastroEmpresaTela extends AppCompatActivity {
     }
 
     private void deletarInformationtoAPI() {
+
         Log.i(TAG, "Deletar ORDER");
+
         JSONObject params = null;
 
-        FabricanteTask bgtDel = new FabricanteTask(
-                durl + "/empresas/"
-                        + edCodigoEmpresa.getText().toString() + ".json",
+        EmpresaTask bgtDel = new EmpresaTask(
+                durl + "/empresas",
+                edCodigoEmpresa.getText().toString(),
                 RestFullHelper.DELETAR, params);
         bgtDel.execute();
         limpar();
     }
 
     private void getInformationtoAPI() {
+
         JSONObject params = null;
 
-        FabricanteTask bgtGet = new FabricanteTask(
-                durl + "/empresas/"
-                        + edCodigoEmpresa.getText().toString() + ".json",
+        EmpresaTask bgtGet = new EmpresaTask(
+                durl + "/empresas",
+                edCodigoEmpresa.getText().toString(),
                 RestFullHelper.GET, params);
+
         bgtGet.execute();
     }
 
     private void postInformationtoAPI() {
+
         Log.d(TAG, "POSTING ORDER");
+
         JSONObject params = new JSONObject();
 
         try {
             params.put("nome", edNomeEmpresa.getText().toString());
             params.put("cnpj", edCnpj.getText().toString());
-            params.put("telefone", edTelefone.getText().toString());
             params.put("endereco", edEndereco.getText().toString());
+            params.put("telefone", edTelefone.getText().toString());
 
         } catch (JSONException e) {
+
             e.printStackTrace();
         }
 
-        FabricanteTask bgtPost = new FabricanteTask(
-                durl + "/empresas.json", RestFullHelper.POST, params);
+        EmpresaTask bgtPost = new EmpresaTask(
+                durl + "/empresas", null, RestFullHelper.POST, params);
         bgtPost.execute();
 
     }
 
     private void putInformationtoAPI() {
+
         Log.i(TAG, "PUT ORDER");
+
         JSONObject params = new JSONObject();
 
         try {
+            params.put("id", edCodigoEmpresa.getText().toString());
             params.put("nome", edNomeEmpresa.getText().toString());
             params.put("cnpj", edCnpj.getText().toString());
-            params.put("telefone", edTelefone.getText().toString());
             params.put("endereco", edEndereco.getText().toString());
+            params.put("telefone", edTelefone.getText().toString());
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        FabricanteTask bgtPut = new FabricanteTask(
-                durl + "/empresas/"
-                        + edCodigoEmpresa.getText().toString() + ".json",
+        EmpresaTask bgtPut = new EmpresaTask(
+                durl + "/empresas", edCodigoEmpresa.getText().toString(),
                 RestFullHelper.PUT, params);
         bgtPut.execute();
+        limpar();
+
     }
 
     private Context getContext() {
+
         return this;
     }
 
     private void alert(String s) {
+
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+
         return super.onOptionsItemSelected(item);
     }
 
-    public class FabricanteTask extends AsyncTask<String, String, JSONObject> {
+
+    public class EmpresaTask extends AsyncTask<String, String, Empresa> {
 
         String url = null;
         String method = null;
+        String id = null;
         JSONObject params1 = null;
 
         ProgressDialog dialog;
 
-        public FabricanteTask(String url, String method, JSONObject params1) {
+        public EmpresaTask(String url, String id, String method, JSONObject params) {
             this.url = url;
             this.method = method;
-            this.params1 = params1;
+            this.params1 = params;
+            this.id = id;
+
         }
 
         @Override
@@ -193,26 +214,30 @@ public class CadastroEmpresaTela extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(JSONObject professor) {
+        protected void onPostExecute(Empresa jsonObject) {
 
-            if (professor != null) {
-                try {
-                    edCodigoEmpresa.setText(professor.getString("id"));
-                    edNomeEmpresa.setText(professor.getString("nome"));
-                    edCnpj.setText(professor.getString("cnpj"));
-                    edTelefone.setText(professor.getString("telefone"));
-                    edEndereco.setText(professor.getString("endereco"));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+            if (jsonObject != null) {
+
+                edCodigoEmpresa.setText(jsonObject.getId().toString());
+                edNomeEmpresa.setText(jsonObject.getNome());
+                edCnpj.setText(jsonObject.getCnpj());
+                edEndereco.setText(jsonObject.getEndereco());
+                edTelefone.setText(jsonObject.getTelefone());
+
             }
+
             dialog.dismiss();
         }
 
         @Override
-        protected JSONObject doInBackground(String... params) {
-            RestFullHelper http = new RestFullHelper();
-            return http.getJSON(url, method, params1);
+        protected Empresa doInBackground(String... params) {
+
+            EmpresaService empresaService = new EmpresaService(url, id, method, params1);
+
+            Empresa empresa = empresaService.execute();
+
+            return empresa;
+
         }
     }
 }

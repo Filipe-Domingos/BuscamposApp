@@ -1,4 +1,4 @@
-package br.edu.iff.pooa20152.buscampos;
+package br.edu.iff.pooa20152.buscampos.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +11,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import br.edu.iff.pooa20152.buscampos.R;
 
 public class LoginTela extends AppCompatActivity {
 

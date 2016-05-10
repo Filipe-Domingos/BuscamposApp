@@ -11,19 +11,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginTela">
+        <activity android:name=".activity.LoginTela">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-            <activity android:name=".PrincipalTela" />
-            <activity android:name=".CadastroUsuarioTela" />
-            <activity android:name=".CadastroPontoTela" />
-            <activity android:name=".CadastroOnibusTela" />
-            <activity android:name=".CadastroLinhaTela" />
-            <activity android:name=".CadastroHorarioTela" />
-            <activity android:name=".CadastroEmpresaTela">
+            <activity android:name=".activity.PrincipalTela" />
+            <activity android:name=".activity.CadastroUsuarioTela" />
+            <activity android:name=".activity.CadastroPontoTela" />
+            <activity android:name=".activity.CadastroOnibusTela" />
+            <activity android:name=".activity.CadastroLinhaTela" />
+            <activity android:name=".activity.CadastroHorarioTela" />
+            <activity android:name=".activity.CadastroEmpresaTela">
         </activity>
     </application>
 

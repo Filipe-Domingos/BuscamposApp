@@ -1,9 +1,11 @@
-package br.edu.iff.pooa20152.buscampos;
+package br.edu.iff.pooa20152.buscampos.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import br.edu.iff.pooa20152.buscampos.R;
 
 public class PrincipalTela extends AppCompatActivity {
 
