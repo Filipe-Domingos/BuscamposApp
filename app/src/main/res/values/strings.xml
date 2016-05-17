@@ -68,7 +68,7 @@
         <item>Não</item>
     </string-array>
     <string-array name="sexo_array">
-        <item>Masculino</item>
+        <item>Masculino</item>B
         <item>Feminino</item>
     </string-array>
 </resources>
